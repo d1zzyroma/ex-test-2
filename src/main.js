@@ -1,35 +1,26 @@
 import Swiper from 'swiper/bundle';
-
-// import styles bundle
 import 'swiper/css/bundle';
 
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
     direction: 'horizontal',
     loop: true,
   
-    // If we need pagination
     pagination: {
       el: '.swiper-pagination',
     },
   
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
+
   });
 
 
 const currentDate = new Date();
 
 const day = currentDate.getDate();
-const month = currentDate.getMonth() + 1; // Додаємо 1, оскільки місяці в JavaScript починаються з 0
+const month = currentDate.getMonth() + 1; 
 const year = currentDate.getFullYear();
 const formattedDate = `${day}-${month}-${year}`;
 const publicationDateElement = document.getElementById('publication_date');
@@ -123,7 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="comment-text-content">
                     <p class="comment-text"><b style="font-size: 18px; color: dodgerblue;">${commentAuthor}</b></p>
                     <p class="comment-text">${commentMessage}</p>
-                    <!-- Додайте інші елементи або зображення за необхідності -->
                     <div class="icons">
                         <ul class="icons-list">
                             <li class="icons-list-item">
